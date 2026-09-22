@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站套餐-企业建站服务、SEO优化与域名空间组合方案</title>
+    <meta name="description" content="提供专业网站套餐服务，包含域名注册、虚拟主机、企业建站系统及SEO优化配置。适合中小企业快速搭建高性价比官网，一站式解决建站需求。">
+    <meta name="keywords" content="网站套餐,企业建站,域名空间,SEO优化,网站托管">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-cta {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .info-card {
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .info-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            padding: 40px 30px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--shadow-lg);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        .plan-features {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .plan-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .check-icon {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .plan-features li.disabled {
+            color: #cbd5e1;
+            text-decoration: line-through;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #eff6ff;
+        }
+
+        .btn-solid {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-solid:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Features Detail */
+        .features-detail {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .detail-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .detail-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .check-list svg {
+            flex-shrink: 0;
+            margin-top: 4px;
+            color: var(--primary-color);
+        }
+
+        .detail-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <span>极速建站</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#features" class="active">套餐优势</a></li>
+                    <li><a href="#pricing">价格方案</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#pricing" class="btn-cta">立即咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>一站式网站套餐解决方案</h1>
+                <p>无需复杂技术背景，选择适合您的网站套餐。包含域名、空间、建站系统及基础SEO优化，助您快速上线专业官网。</p>
+                <div class="hero-tags">
+                    <span class="tag">企业官网</span>
+                    <span class="tag">电商展示</span>
+                    <span class="tag">SEO优化</span>
+                    <span class="tag">7x24小时技术支持</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">🚀</div>
+                        <h3>极速部署</h3>
+                        <p>采用成熟的内容管理系统，后台可视化操作，无需编写代码即可自主更新网站内容，上线速度提升80%。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🛡️</div>
+                        <h3>安全稳定</h3>
+                        <p>提供SSL证书、定期数据备份及服务器防火墙防护，确保您的网站数据安全，防止黑客攻击。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📈</div>
+                        <h3>SEO基础优化</h3>
+                        <p>内置SEO友好代码结构，支持生成标准地图，提升搜索引擎收录效率，让客户更容易找到您。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>精选套餐方案</h2>
+                    <p>根据企业规模与业务需求，提供灵活的配置选择</p>
+                </div>
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-name">基础展示版</div>
+                        <div class="plan-price">¥999<span>/年</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 标准企业模板（3选1）</li>
+                            <li><span class="check-icon">✓</span> 域名注册（.com/.cn）</li>
+                            <li><span class="check-icon">✓</span> 500M 独立空间</li>
+                            <li><span class="check-icon">✓</span> 企业邮箱（1个）</li>
+                            <li><span class="check-icon">✓</span> 基础SEO设置</li>
+                            <li class="disabled"><span>✕</span> 多语言支持</li>
+                            <li class="disabled"><span>✕</span> 专属客服响应</li>
+                        </ul>
+                        <button class="btn-block btn-outline" onclick="selectPlan('基础展示版')">选择此套餐</button>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="pricing-card featured">
+                        <div class="badge">最受欢迎</div>
+                        <div class="plan-name">全能营销版</div>
+                        <div class="plan-price">¥2,699<span>/年</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 定制设计风格</li>
+                            <li><span class="check-icon">✓</span> 域名注册（.com/.cn）</li>
+                            <li><span class="check-icon">✓</span> 2G 高速云空间</li>
+                            <li><span class="check-icon">✓</span> 5个企业邮箱账号</li>
+                            <li><span class="check-icon">✓</span> 深度SEO优化服务</li>
+                            <li><span class="check-icon">✓</span> 手机端自适应设计</li>
+                            <li><span class="check-icon">✓</span> 优先技术支持</li>
+                        </ul>
+                        <button class="btn-block btn-solid" onclick="selectPlan('全能营销版')">立即开通</button>
+                    </div>
+
+                    <!-- Enterprise Plan -->
+                    <div class="pricing-card">
+                        <div class="plan-name">旗舰定制版</div>
+                        <div class="plan-price">¥5,999<span>/年起</span></div>
+                        <ul class="plan-features">
+                            <li><span class="check-icon">✓</span> 独立UI设计师设计</li>
+                            <li><span class="check-icon">✓</span> 域名注册及备案服务</li>
+                            <li><span class="check-icon">✓</span> 5G 独立服务器</li>
+                            <li><span class="check-icon">✓</span> 无限企业邮箱</li>
+                            <li><span class="check-icon">✓</span> 竞品分析与策略</li>
+                            <li><span class="check-icon">✓</span> 多语言网站构建</li>
+                            <li><span class="check-icon">✓</span> 1对1 项目经理对接</li>
+                        </ul>
+                        <button class="btn-block btn-outline" onclick="selectPlan('旗舰定制版')">联系销售</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-detail">
+            <div class="container">
+                <div class="detail-grid">
+                    <div class="detail-content">
+                        <h2>为什么选择我们的网站套餐？</h2>
+                        <p>网站是企业在互联网上的数字名片。我们的套餐不仅提供硬件资源，更注重软件功能的实用性，帮助您降低运营成本，提升品牌形象。</p>
+                        <ul class="check-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>包含全套建站工具，操作简单直观，无需专业IT知识。</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>数据迁移与服务器维护由我们负责，您无需操心技术细节。</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>灵活的升级选项，随着业务增长可随时扩容空间与功能。</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detail-image">
+                        <img src="https://picsum.photos/seed/tech/600/400" alt="网站后台管理界面示意图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>关于网站套餐的常见疑问解答</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">网站套餐包含哪些内容？</div>
+                        <div class="faq-answer">
+                            套餐通常包含域名注册、服务器空间、建站系统授权、基础模板、企业邮箱以及一年的技术维护服务。具体内容请参考各套餐详情页。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否需要懂代码才能使用？</div>
+                        <div class="faq-answer">
+                            不需要。我们的系统采用可视化拖拽操作，您只需在后台像编辑Word文档一样添加文字和图片即可完成网站更新。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果网站被挂马怎么办？</div>
+                        <div class="faq-answer">
+                            我们提供全年安全防护服务，包括服务器防火墙、定期漏洞扫描和紧急数据恢复，确保您的网站安全运行。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">可以自己修改套餐内容吗？</div>
+                        <div class="faq-answer">
+                            可以。在服务期内，您可以根据业务需求随时升级空间大小或增加企业邮箱账号，我们会按实际使用量计费。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于极速建站</h4>
+                    <p>专注于为中小企业提供高性价比的网站建设与互联网服务解决方案。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">套餐介绍</a></li>
+                        <li><a href="#">成功案例</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>客服热线：400-123-4567</li>
+                        <li>电子邮箱：support@example.com</li>
+                        <li>工作时间：周一至周五 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 极速建站服务平台 版权所有.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Simple Plan Selection Feedback
+        function selectPlan(planName) {
+            // In a real scenario, this would redirect to checkout
+            // Here we provide visual feedback via console or simple alert replacement logic if needed
+            // For this static page, we'll use a simple interaction
+            const btn = event.target;
+            const originalText = btn.innerText;
+            
+            btn.innerText = "已选择 " + planName;
+            btn.style.backgroundColor = "#10b981"; // Green
+            btn.style.color = "white";
+            
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.backgroundColor = ""; // Revert to CSS default
+                btn.style.color = "";
+            }, 2000);
+        }
+    </script>
+</body>
+                          </html>
