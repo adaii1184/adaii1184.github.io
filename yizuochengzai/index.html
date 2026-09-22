@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一座城在等你删除的肉 - 沉浸式互动小说平台。探索关于记忆、遗忘与城市废墟的悬疑故事，体验独特的文字冒险与情感抉择。">
+    <meta name="keywords" content="一座城在等你删除的肉,互动小说,悬疑故事,文字冒险,记忆删除,废墟城市">
+    <title>一座城在等你删除的肉 - 沉浸式悬疑互动小说与记忆废墟探索</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #e0e0e0;
+            --text-muted: #888888;
+            --accent-color: #d32f2f; /* 血红色调 */
+            --accent-hover: #b71c1c;
+            --border-color: #333333;
+            --font-serif: "Songti SC", "Noto Serif SC", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(15, 15, 17, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-actions button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/cyberpunk/1920/1080.jpg') center/cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: transparent;
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        /* 章节导航 */
+        .chapter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            flex-wrap: wrap;
+        }
+
+        .chapter-nav a {
+            background-color: var(--card-bg);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 2px;
+            font-size: 0.9rem;
+        }
+
+        .chapter-nav a:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* 主要内容区 */
+        main {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-family: var(--font-sans);
+        }
+
+        /* 故事卡片网格 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent-color);
+        }
+
+        .card-image {
+            height: 200px;
+            background-color: #000;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .card-image img {
+            opacity: 1;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            border-radius: 2px;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 1rem;
+        }
+
+        /* 章节列表 */
+        .chapter-list-container {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            font-weight: 500;
+        }
+
+        .chapter-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* FAQ 区域 */
+        .faq-section {
+            background-color: #141416;
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #0a0a0c;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <div class="logo">一座城<span>在等你删除的肉</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">剧情</a></li>
+                    <li><a href="#">角色</a></li>
+                    <li><a href="#">设定集</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>开始阅读</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>记忆的废墟与无法删除的罪恶</h1>
+            <p>在这个被遗忘的赛博废墟中，每个人都在寻找自己的过去。你能否在城市的阴影里，找到那块被刻意抹去的“肉”？</p>
+            <a href="#" class="cta-button">进入废墟</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="chapter-nav">
+            <a href="#">第一章：雨夜的霓虹</a>
+            <a href="#">第二章：数据幽灵</a>
+            <a href="#">第三章：旧城区档案</a>
+            <a href="#">第四章：黑市诊所</a>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- 热门章节 -->
+        <section class="content-section">
+            <div class="section-title">
+                <h2>热门章节</h2>
+                <a href="#">查看全部 &rarr;</a>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/city1/400/300.jpg" alt="霓虹雨夜">
+                        <span class="card-badge">热门</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">01. 霓虹雨夜</h3>
+                        <p class="card-desc">雨水冲刷着全息广告牌，主角在无人的街道上醒来，脑海中只有模糊的疼痛感。</p>
+                        <div class="card-meta">
+                            <span>悬疑</span>
+                            <span>更新于 2小时前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/tech/400/300.jpg" alt="数据流">
+                        <span class="card-badge">连载中</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">02. 数据幽灵</h3>
+                        <p class="card-desc">通过神经连接接入网络，主角发现了一个奇怪的信号，似乎在指向“删除”的真相。</p>
+                        <div class="card-meta">
+                            <span>科幻</span>
+                            <span>更新于 5小时前</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/ruins/400/300.jpg" alt="旧城区">
+                        <span class="card-badge">新章</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">03. 旧城区档案</h3>
+                        <p class="card-desc">深入被封锁的旧城区，寻找关于“一座城在等你删除的肉”这一传说的线索。</p>
+                        <div class="card-meta">
+                            <span>探险</span>
+                            <span>更新于 昨天</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 详细剧情与设定 -->
+        <section class="content-section">
+            <div class="section-title">
+                <h2>故事背景</h2>
+            </div>
+            <article style="background-color: var(--card-bg); padding: 2rem; border: 1px solid var(--border-color); color: var(--text-muted);">
+                <p style="margin-bottom: 1rem;">在未来的新都，人类通过神经接口将记忆上传至云端。然而，总有一些无法被算法解析的“异常数据”，被称为“删除的肉”。它们是未被格式化的情感，是残留的痛觉，也是这座城市中最危险的秘密。</p>
+                <p style="margin-bottom: 1rem;">主角是一名记忆清理师，在一次常规清理任务中，意外激活了一块被层层加密的古老存储芯片。芯片中并没有文件，只有一段不断重复的音频：<em>“一座城在等你删除的肉。”</em></p>
+                <p>随着调查深入，主角发现这座城市本身就是一个巨大的服务器，而“肉”并非指代肉体，而是这座城市诞生的原初代码——一种充满生命力的、不完美的、却也是最真实的部分。官方机构试图通过“删除”这一概念来维持秩序，而主角必须在道德与生存之间做出抉择。</p>
+            </article>
+        </section>
+
+        <!-- 最新章节列表 -->
+        <section class="content-section">
+            <div class="section-title">
+                <h2>最新更新</h2>
+            </div>
+            <div class="chapter-list-container">
+                <div class="chapter-item">
+                    <span class="chapter-title">05. 黑市诊所的手术刀</span>
+                    <span class="chapter-date">2023-10-24</span>
+                </div>
+                <div class="chapter-item">
+                    <span class="chapter-title">06. 潜入核心区</span>
+                    <span class="chapter-date">2023-10-23</span>
+                </div>
+                <div class="chapter-item">
+                    <span class="chapter-title">07. 谎言的代价</span>
+                    <span class="chapter-date">2023-10-22</span>
+                </div>
+                <div class="chapter-item">
+                    <span class="chapter-title">08. 终章：重置</span>
+                    <span class="chapter-date">2023-10-20</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>“一座城在等你删除的肉”是什么类型的作品？</h3>
+                        <p>这是一部赛博朋克风格的互动文字小说，融合了悬疑、科幻与心理惊悚元素。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>在哪里可以阅读完整内容？</h3>
+                        <p>您可以点击页面顶部的“开始阅读”按钮进入阅读页面，所有章节均可免费试读。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>作品的更新频率是怎样的？</h3>
+                        <p>我们通常每周更新2-3个章节，具体时间请关注页面公告。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>是否支持移动端阅读？</h3>
+                        <p>是的，本站完全适配移动端设备，您可以在手机上流畅体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 一座城在等你删除的肉 版权所有</p>
+            <p>关于我们 | 隐私政策 | 联系合作</p>
+        </div>
+    </footer>
+
+</body>
+</html>
