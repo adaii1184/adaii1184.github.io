@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜月安娜作品 - 异世界奇幻冒险与角色图鉴指南</title>
+    <meta name="description" content="本站为您提供《Re:从零开始的异世界生活》中角色菜月安娜的详细作品介绍、角色解析、同人图集及剧情回顾，全方位了解这位充满魅力的剑士少女。">
+    <meta name="keywords" content="菜月安娜作品, 菜月昴, 菜月安娜, Re:从零开始的异世界生活, 蕾姆, 艾米莉亚, 异世界动画, 角色分析">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #ab47bc;
+            --accent-color: #ffca28;
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23ffffff" fill-opacity="0.05"><path d="M50 0 L100 50 L50 100 L0 50 Z"/></g></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+
+        /* Character Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .character-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .character-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .character-info {
+            padding: 30px;
+        }
+
+        .character-name {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .character-role {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-list {
+            margin-top: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-weight: 700;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Works Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .work-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .work-content {
+            padding: 20px;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .work-meta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        /* Story Analysis */
+        .analysis-section {
+            background: var(--white);
+        }
+
+        .analysis-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .analysis-item {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .analysis-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(106, 27, 154, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .analysis-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .analysis-content p {
+            color: var(--text-gray);
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c1a3a;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .character-img {
+                height: 250px;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for single file demo */
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>Re:</span>Wiki
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#profile">角色档案</a></li>
+                    <li><a href="#works">作品图鉴</a></li>
+                    <li><a href="#analysis">剧情分析</a></li>
+                    <li><a href="#community">同人社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">Re:从零开始的异世界生活</span>
+                    <h1>菜月安娜作品集</h1>
+                    <p>探索菜月安娜这一角色的核心魅力。从最初的青梅竹马到成为强大的剑士，她不仅是昴生命中最重要的羁绊，更是推动剧情发展的关键人物。</p>
+                    <a href="#profile" style="background: var(--white); color: var(--primary-color); padding: 12px 30px; border-radius: 30px; font-weight: 700; display: inline-block;">查看详细档案</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/animegirl1/500/500" alt="菜月安娜角色插画" width="500" height="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Profile -->
+    <section id="profile" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">角色档案</h2>
+                <p class="section-subtitle">深入了解菜月安娜的背景、能力与人际关系</p>
+            </div>
+            
+            <div class="profile-grid">
+                <article class="character-card">
+                    <img src="https://picsum.photos/seed/animegirl2/400/500" alt="菜月安娜角色立绘" class="character-img">
+                </article>
+                
+                <div class="character-info">
+                    <h2 class="character-name">菜月安娜</h2>
+                    <span class="character-role">剑士 / 昴的青梅竹马</span>
+                    <p>菜月安娜是菜月昴在地球上的青梅竹马，性格活泼开朗，富有正义感。在异世界被召唤后，她成为了昴最信任的同伴之一。虽然最初只是普通的高中生，但在经历了无数次的死亡轮回后，她逐渐觉醒了特殊的才能，成长为一名能够独当一面的剑士。她与昴之间深厚的羁绊是整部作品的核心情感线索。</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">全名</span>
+                            <span class="info-value">菜月安娜 (Shinobu)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">种族</span>
+                            <span class="info-value">人类</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">所属</span>
+                            <span class="info-value">昴的同伴 / 艾米莉亚护卫队</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">能力</span>
+                            <span class="info-value">剑术、精神感知（觉醒后）</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">关键剧情</span>
+                            <span class="info-value">第1话被召唤、第13话死亡、第17话觉醒</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Gallery -->
+    <section id="works" class="section" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">作品与同人图鉴</h2>
+                <p class="section-subtitle">精选相关插画、同人创作及官方同人志</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Card 1 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/animeart1/300/200" alt="安娜战斗插画" class="work-thumb">
+                    <div class="work-content">
+                        <h3 class="work-title">剑士安娜：觉醒时刻</h3>
+                        <p class="work-desc">描绘安娜在异世界觉醒剑术能力后的战斗姿态，展现她坚毅与温柔并存的一面。</p>
+                        <div class="work-meta">
+                            <span>同人创作</span>
+                            <span>2.5k 浏览</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/animeart2/300/200" alt="安娜与昴互动" class="work-thumb">
+                    <div class="work-content">
+                        <h3 class="work-title">记忆中的日常</h3>
+                        <p class="work-desc">温馨的日常向插画，重现安娜和昴在地球上的美好回忆，色调温暖治愈。</p>
+                        <div class="work-meta">
+                            <span>同人创作</span>
+                            <span>4.1k 浏览</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/animeart3/300/200" alt="安娜特写" class="work-thumb">
+                    <div class="work-content">
+                        <h3 class="work-title">午后茶会</h3>
+                        <p class="work-desc">细腻的特写插画，捕捉安娜微笑时的眼神，适合作为壁纸使用。</p>
+                        <div class="work-meta">
+                            <span>同人创作</span>
+                            <span>1.8k 浏览</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/animeart4/300/200" alt="安娜装备" class="work-thumb">
+                    <div class="work-content">
+                        <h3 class="work-title">全套装备展示</h3>
+                        <p class="work-desc">详细展示了安娜在剧情后期获得的装备细节与材质纹理。</p>
+                        <div class="work-meta">
+                            <span>设定集</span>
+                            <span>3.2k 浏览</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Analysis -->
+    <section id="analysis" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">剧情深度解析</h2>
+                <p class="section-subtitle">安娜在故事线中的关键作用与成长轨迹</p>
+            </div>
+
+            <div class="analysis-list">
+                <div class="analysis-item">
+                    <div class="analysis-icon">01</div>
+                    <div class="analysis-content">
+                        <h3>羁绊的起点</h3>
+                        <p>安娜与昴的羁绊是整部作品最原始的情感锚点。她在第一话被召唤到异世界，与昴一同面临未知的恐惧。她的存在证明了昴并非独自一人，这种“青梅竹马”的设定为后续剧情中昴为了复活她而不断挑战死亡奠定了基础。</p>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon">02</div>
+                    <div class="analysis-content">
+                        <h3>成长的阵痛</h3>
+                        <p>安娜的觉醒并非一蹴而就。在经历了多次轮回中队友的牺牲后，她从一个普通的高中生逐渐转变为能够保护他人的战士。这一过程伴随着巨大的心理压力，但也正是这些痛苦经历，让她变得更加坚强和成熟。</p>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-icon">03</div>
+                    <div class="analysis-content">
+                        <h3>未来的可能性</h3>
+                        <p>随着剧情的发展，安娜展现出了特殊的精神感知能力，这为她未来的成长提供了巨大的想象空间。她不仅是昴的同伴，更是能够独立行走于异世界的角色，她的未来故事线充满了期待。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col" style="flex: 2; min-width: 250px;">
+                    <div class="logo" style="margin-bottom: 15px; color: var(--white);">
+                        <span>Re:</span>Wiki
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        本站为《Re:从零开始的异世界生活》粉丝制作的非官方资料站。我们致力于整理角色资料、作品图鉴及剧情解析，为粉丝提供交流与学习平台。
+                    </p>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#profile">角色档案</a></li>
+                        <li><a href="#works">作品图鉴</a></li>
+                        <li><a href="#analysis">剧情分析</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">官方同人志</a></li>
+                        <li><a href="#">角色Cosplay</a></li>
+                        <li><a href="#">周边商品</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Re:Wiki Fan Site. All Rights Reserved. 仅供学习与交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
