@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="军团战争3.6版本攻略、英雄平衡调整解析、阵容搭配技巧及游戏玩法详解。为您提供最新的军团战争3.6版本资讯与实战指南。">
+    <meta name="keywords" content="军团战争3.6,军团战争,军团战争攻略,军团战争阵容,军团战争玩法">
+    <title>军团战争3.6-版本深度攻略与阵容搭配指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --accent-hover: #d35400;
+            --bg-body: #f4f6f9;
+            --bg-card: #ffffff;
+            --text-main: #333333;
+            --text-sub: #7f8c8d;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --spacing: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-sub);
+            transition: all 0.2s;
+        }
+
+        .search-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Article Cards */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            transition: transform 0.2s;
+            border-left: 4px solid transparent;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            border-left-color: var(--accent);
+        }
+
+        .article-thumb {
+            width: 180px;
+            height: 120px;
+            background-color: #eee;
+            border-radius: 8px;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .article-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            flex: 1;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Sidebar Widgets */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .hero-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .hero-rank {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .hero-name {
+            font-weight: 600;
+        }
+
+        .hero-type {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* Strategy Grid */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .strategy-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .strategy-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .strategy-img {
+            height: 160px;
+            background-color: #ddd;
+        }
+        
+        .strategy-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .strategy-body {
+            padding: 20px;
+        }
+
+        .strategy-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .strategy-desc {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+        }
+
+        .strategy-link {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            position: relative;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-sub);
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #ecf0f1;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-card {
+                flex-direction: column;
+            }
+
+            .article-thumb {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">军团<span>战争3.6</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#hero">英雄图鉴</a></li>
+                    <li><a href="#strategy">阵容攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索攻略</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-tags">
+                    <span class="tag">版本更新</span>
+                    <span class="tag">平衡性调整</span>
+                    <span class="tag">S级推荐</span>
+                </div>
+                <h1>军团战争3.6 版本深度解析</h1>
+                <p>深入探讨3.6版本的核心改动，掌握新的流派思路，助您在战场上所向披靡。本文包含最新的英雄削弱与增强数据，以及实战中的阵容搭配指南。</p>
+                <a href="#strategy" class="cta-btn">查看最新阵容</a>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- Main Content Column -->
+            <div class="content-column">
+                <!-- Featured Strategy -->
+                <section id="strategy">
+                    <div class="section-header">
+                        <h2 class="section-title">版本强势阵容推荐</h2>
+                        <a href="#" style="color:var(--accent); font-weight:600; font-size:0.9rem;">查看更多 &rarr;</a>
+                    </div>
+                    <div class="strategy-grid">
+                        <article class="strategy-card">
+                            <div class="strategy-img">
+                                <img src="https://picsum.photos/seed/war1/400/300" alt="暗夜刺客阵容">
+                            </div>
+                            <div class="strategy-body">
+                                <h3 class="strategy-title">暗夜刺客爆发流</h3>
+                                <p class="strategy-desc">利用3.6版本中刺客伤害加成的特性，配合控制型辅助，实现瞬间清屏。</p>
+                                <a href="#" class="strategy-link">阅读全文</a>
+                            </div>
+                        </article>
+                        <article class="strategy-card">
+                            <div class="strategy-img">
+                                <img src="https://picsum.photos/seed/war2/400/300" alt="圣骑士防御流">
+                            </div>
+                            <div class="strategy-body">
+                                <h3 class="strategy-title">圣骑士钢铁防线</h3>
+                                <p class="strategy-desc">针对物理输出环境的优化，大幅提升前排生存能力，适合持久战。</p>
+                                <a href="#" class="strategy-link">阅读全文</a>
+                            </div>
+                        </article>
+                        <article class="strategy-card">
+                            <div class="strategy-img">
+                                <img src="https://picsum.photos/seed/war3/400/300" alt="元素法师控制流">
+                            </div>
+                            <div class="strategy-body">
+                                <h3 class="strategy-title">元素法师控场流</h3>
+                                <p class="strategy-desc">利用新版本元素法术的连锁反应，制造大范围硬控，打乱敌方节奏。</p>
+                                <a href="#" class="strategy-link">阅读全文</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Latest News -->
+                <section>
+                    <div class="section-header">
+                        <h2 class="section-title">版本动态与更新日志</h2>
+                    </div>
+                    <div class="article-list">
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/news1/300/200" alt="更新公告">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span>2023-10-24</span>
+                                    <span>官方公告</span>
+                                </div>
+                                <h3 class="article-title">军团战争3.6正式服上线公告：平衡性调整一览</h3>
+                                <p class="article-excerpt">本次更新主要针对部分英雄的数值进行了微调，同时新增了“赛季积分”系统，快来查看详细改动列表...</p>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/news2/300/200" alt="赛事资讯">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span>2023-10-22</span>
+                                    <span>赛事资讯</span>
+                                </div>
+                                <h3 class="article-title">KPL秋季赛总决赛：冠军队伍的3.6版本首发阵容解析</h3>
+                                <p class="article-excerpt">冠军战队在决赛中使用的“光暗双修”流派在3.6版本中表现异常强势，我们为您复盘了关键对局。</p>
+                            </div>
+                        </article>
+                        <article class="article-card">
+                            <div class="article-thumb">
+                                <img src="https://picsum.photos/seed/news3/300/200" alt="装备改动">
+                            </div>
+                            <div class="article-content">
+                                <div class="article-meta">
+                                    <span>2023-10-20</span>
+                                    <span>装备攻略</span>
+                                </div>
+                                <h3 class="article-title">新版本核心装备“破晓之刃”实战评测</h3>
+                                <p class="article-excerpt">这件装备的被动效果在3.6版本得到了显著增强，对于射手和法师英雄来说是质的飞跃。</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Column -->
+            <aside>
+                <!-- Hero Tier List -->
+                <div class="widget">
+                    <h3 class="widget-title">3.6 英雄T0级排行</h3>
+                    <ul class="hero-list">
+                        <li>
+                            <div class="hero-rank">
+                                <span class="rank-num">1</span>
+                                <div>
+                                    <div class="hero-name">虚空行者</div>
+                                    <div class="hero-type">法师 / 控制</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hero-rank">
+                                <span class="rank-num">2</span>
+                                <div>
+                                    <div class="hero-name">狂暴战士</div>
+                                    <div class="hero-type">战士 / 刺客</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hero-rank">
+                                <span class="rank-num">3</span>
+                                <div>
+                                    <div class="hero-name">圣光牧师</div>
+                                    <div class="hero-type">辅助 / 治疗</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hero-rank">
+                                <span class="rank-num">4</span>
+                                <div>
+                                    <div class="hero-name">暗影猎手</div>
+                                    <div class="hero-type">射手 / 爆发</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="hero-rank">
+                                <span class="rank-num">5</span>
+                                <div>
+                                    <div class="hero-name">山丘之王</div>
+                                    <div class="hero-type">坦克 / 坦度</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Guide -->
+                <div class="widget">
+                    <h3 class="widget-title">新手入门指南</h3>
+                    <p style="font-size:0.9rem; color:#666; margin-bottom:15px;">
+                        在军团战争中，合理搭配兵种克制关系是获胜的关键。3.6版本中，魔法伤害对物理护甲的穿透效果有所提升。
+                    </p>
+                    <a href="#" class="cta-btn" style="width:100%; text-align:center; font-size:0.9rem;">阅读完整指南</a>
+                </div>
+
+                <!-- Community -->
+                <div class="widget">
+                    <h3 class="widget-title">热门讨论区</h3>
+                    <ul class="hero-list">
+                        <li><a href="#" style="font-size:0.9rem;">[讨论] 新版本是不是削弱了控制英雄？</a></li>
+                        <li><a href="#" style="font-size:0.9rem;">[求助] 阵容推荐：如何搭配光系英雄？</a></li>
+                        <li><a href="#" style="font-size:0.9rem;">[分享] 我的低保通关心得分享</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="container" id="faq">
+            <div class="section-header">
+                <h2 class="section-title">军团战争3.6 常见问题</h2>
+            </div>
+            <div class="faq-container">
+                <details>
+                    <summary>3.6版本有哪些主要改动？</summary>
+                    <div class="faq-content">
+                        本次更新主要涉及英雄技能数值的微调，特别是法师类英雄的冷却时间缩短，以及新装备“破晓之刃”的加入。此外，地图机制也进行了优化，增加了新的随机事件。
+                    </div>
+                </details>
+                <details>
+                    <summary>新手应该选择什么英雄开始玩？</summary>
+                    <div class="faq-content">
+                        对于新手玩家，推荐从“圣光牧师”或“山丘之王”入手。前者能提供持续的治疗和辅助，容错率高；后者拥有极高的坦度，能承受大量伤害，帮助玩家熟悉游戏节奏。
+                    </div>
+                </details>
+                <details>
+                    <summary>如何快速提升竞技场排名？</summary>
+                    <div class="faq-content">
+                        提升排名的关键在于组建一套高协同的阵容。建议参考当前版本的T0级英雄排行，将输出、控制和辅助英雄合理搭配，并确保兵种之间的克制关系。
+                    </div>
+                </details>
+                <details>
+                    <summary>赛季积分有什么用？</summary>
+                    <div class="faq-content">
+                        赛季积分用于解锁排位奖励和限定皮肤。积分越高，赛季结束时获得的奖励越丰厚。请注意，赛季积分会在每个赛季结束时清零。
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>军团战争3.6 攻略站</h3>
+                    <p style="color:#bdc3c7; font-size:0.9rem; line-height:1.6;">
+                        专注于军团战争3.6版本的深度攻略、阵容搭配与数据分析。为玩家提供最及时、最实用的游戏资讯。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">英雄图鉴</a></li>
+                        <li><a href="#">装备大全</a></li>
+                        <li><a href="#">阵容模拟器</a></li>
+                        <li><a href="#">视频教学</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><a href="#">投稿建议</a></li>
+                        <li><a href="#">合作推广</a></li>
+                        <li><a href="#">问题反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 军团战争3.6 攻略站. All Rights Reserved. 本站为玩家社区，非官方网站.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
