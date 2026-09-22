@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩怀智个人主页 - 展示韩怀智的教育背景、学术研究方向、主要著作及联系方式。本站致力于提供关于韩怀智先生的专业学术信息与最新动态。">
+    <meta name="keywords" content="韩怀智, 个人主页, 学术研究, 教育背景, 联系方式">
+    <title>韩怀智-个人主页与学术研究信息平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--light-text);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* 主要内容区 */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        /* 简介网格 */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .profile-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            height: fit-content;
+        }
+
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #999;
+            overflow: hidden;
+        }
+        
+        .avatar-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-info .title {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-list li strong {
+            min-width: 80px;
+            color: var(--primary-color);
+        }
+
+        /* 学术研究板块 */
+        .research-section {
+            background-color: var(--white);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 80px;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .research-item {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .research-item:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .research-tag {
+            display: inline-block;
+            background-color: #eaf2f8;
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .research-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .research-item p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* 联系方式 */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        .contact-item span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a252f;
+            color: #7f8c8d;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; /* 简化移动端导航 */
+            }
+            
+            .research-section {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">韩怀智</div>
+                <ul class="nav-links">
+                    <li><a href="#about" class="active">个人简介</a></li>
+                    <li><a href="#research">学术研究</a></li>
+                    <li><a href="#publications">著作与项目</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>韩怀智</h1>
+            <p>致力于学术研究与实践创新，探索前沿领域，分享知识与见解。</p>
+            <a href="#contact" class="cta-button">建立联系</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 个人简介部分 -->
+        <section id="about">
+            <div class="section-title">
+                <h2>关于我</h2>
+                <p>了解韩怀智的教育背景与专业领域</p>
+            </div>
+            <div class="profile-grid">
+                <article class="profile-card">
+                    <div class="avatar-placeholder">
+                        <img src="https://picsum.photos/seed/hanhuaizhi/300/300" alt="韩怀智头像">
+                    </div>
+                    <h3>韩怀智</h3>
+                    <p style="color: #666; margin-bottom: 15px;">资深研究员 / 博士</p>
+                    <a href="#contact" style="color: var(--accent-color); font-weight: 600;">发送邮件</a>
+                </article>
+                <div class="profile-info">
+                    <h3>个人简介</h3>
+                    <p style="margin-bottom: 20px; color: #555;">
+                        韩怀智是一位在[具体研究领域，如：计算机科学、社会学、经济学等]拥有深厚造诣的学者与从业者。长期致力于将理论与实践相结合，关注行业发展趋势与技术创新。
+                    </p>
+                    <ul class="info-list">
+                        <li><strong>教育背景：</strong> 某某大学博士，拥有扎实的理论基础与广泛的学术视野。</li>
+                        <li><strong>研究方向：</strong> 深耕于[具体细分领域]，致力于解决行业痛点与推动技术进步。</li>
+                        <li><strong>职业经历：</strong> 曾任职于[知名机构/企业]，拥有丰富的项目实战与管理经验。</li>
+                        <li><strong>社会职务：</strong> [相关协会会员/专家委员等，如有]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 学术研究板块 -->
+        <section id="research">
+            <div class="section-title">
+                <h2>学术与研究</h2>
+                <p>近期关注的研究方向与核心观点</p>
+            </div>
+            <div class="research-section">
+                <div class="research-grid">
+                    <article class="research-item">
+                        <span class="research-tag">研究方向一</span>
+                        <h3>核心领域探索</h3>
+                        <p>深入研究[具体主题]，分析其内在机制与外部影响，提出具有前瞻性的理论框架。</p>
+                    </article>
+                    <article class="research-item">
+                        <span class="research-tag">方法论</span>
+                        <h3>实证分析与模型构建</h3>
+                        <p>运用先进的统计学工具与数据分析方法，对复杂问题进行量化评估与预测。</p>
+                    </article>
+                    <article class="research-item">
+                        <span class="research-tag">行业应用</span>
+                        <h3>解决方案落地</h3>
+                        <p>将研究成果转化为实际解决方案，服务于[具体行业]，提升效率与质量。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 著作与项目板块 -->
+        <section id="publications">
+            <div class="section-title">
+                <h2>著作与项目</h2>
+                <p>代表性成果与重要项目经历</p>
+            </div>
+            <div class="research-grid">
+                <article class="research-item" style="border-left: 4px solid var(--accent-color);">
+                    <h3>《某某著作名称》</h3>
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">2023年出版 / 专著</p>
+                    <p>本书系统梳理了该领域的知识体系，结合大量案例，为读者提供了全面的参考指南。</p>
+                </article>
+                <article class="research-item" style="border-left: 4px solid var(--accent-color);">
+                    <h3>重点项目：某某计划</h3>
+                    <p style="font-size: 0.9rem; color: #888; margin-bottom: 10px;">项目负责人</p>
+                    <p>主导了该项目的整体规划与执行，成功实现了预期目标，获得了行业内的广泛认可。</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 联系方式区域 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>联系与合作</h2>
+            <p style="margin-bottom: 40px; opacity: 0.8;">欢迎就学术交流、项目合作或咨询事宜进行联系</p>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <span>email@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <span>中国 · 北京市</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>电话咨询</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 韩怀智个人主页. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+                                                         </html>
